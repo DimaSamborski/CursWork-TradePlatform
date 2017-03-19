@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .container-fluid
+        .row
+        for product in productsList
+            .col-md-4.productWrapper
+                img.productImg(src=product.imgLink)
+                a(href='./product=' + product.name)
+                    h5.productName=product.name
+                p.productDescription=product.description
+        
